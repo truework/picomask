@@ -1,6 +1,6 @@
 {
   "name": "picomask",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Very small integer text mask for basic applications.",
   "source": "./index.ts",
   "exports": "./dist/picomask.modern.js",
