@@ -7,9 +7,9 @@ Very small integer text mask for basic applications.
 ## Usage
 
 ```javascript
-import { picomask } from "picomask";
+import { picomask } from 'picomask'
 
-picomask("09072021", "mm/dd/yyyy");
+picomask('09072021', 'mm/dd/yyyy')
 
 // => { value: '09/07/2021', m: '09', d: '07', y: '2021' }
 ```
@@ -17,11 +17,11 @@ picomask("09072021", "mm/dd/yyyy");
 ## Other Examples
 
 ```javascript
-picomask("07092021", "dd-mm-yyyy"); // => { value: '07-09-2021', ... }
-picomask("20210907", "yyyy-mm-dd"); // => { value: '2021-09-07', ... }
-picomask("1231231234", "(nnn) nnn-nnnn"); // => { value: '(123) 123-1234', ... }
-picomask("0624", "mm/yy"); // => { value: '06/24', ... }
-picomask("4242424242424242", "cccc cccc cccc cccc"); // => { value: '4242 4242 4242 4242', ... }
+picomask('07092021', 'dd-mm-yyyy') // => { value: '07-09-2021', ... }
+picomask('20210907', 'yyyy-mm-dd') // => { value: '2021-09-07', ... }
+picomask('1231231234', '(nnn) nnn-nnnn') // => { value: '(123) 123-1234', ... }
+picomask('0624', 'mm/yy') // => { value: '06/24', ... }
+picomask('4242424242424242', 'cccc cccc cccc cccc') // => { value: '4242 4242 4242 4242', ... }
 ```
 
 ## License
