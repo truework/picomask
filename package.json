@@ -1,0 +1,39 @@
+{
+  "name": "picomask",
+  "version": "0.0.0",
+  "description": "Very small integer text mask for basic applications.",
+  "source": "./index.ts",
+  "exports": "./dist/picomask.modern.js",
+  "main": "./dist/picomask.cjs",
+  "module": "./dist/picomask.module.js",
+  "unpkg": "./dist/picomask.umd.js",
+  "scripts": {
+    "prepare": "is-ci || husky install",
+    "build": "microbundle",
+    "test": "tap --ts",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "mask",
+    "text mask",
+    "phone number",
+    "credit card",
+    "date"
+  ],
+  "author": "@estrattonbailey",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@types/node": "^16.7.13",
+    "@types/tap": "^15.0.5",
+    "husky": "^7.0.2",
+    "microbundle": "^0.13.3",
+    "prettier": "^2.3.2",
+    "semantic-release": "^17.4.7",
+    "tap": "^15.0.9",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.2"
+  }
+}
