@@ -40,17 +40,17 @@ jobs:
           version: 6.x
       - name: pnpm - config
         run: pnpm config set store-dir $PNPM_CACHE_FOLDER
-      - name: pnpm - output bin stubs
-        run: echo "#! /usr/bin/env node" > ./packages/presta/cli.js
       - name: pnpm - install
         run: pnpm install
 
       - name: lint
-        run: npm run lint
+        run: pnpm run lint
       - name: test
-        run: npm run test
+        run: pnpm run test
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
       - name: build
-        run: npm run build
+        run: pnpm run build
       - name: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
