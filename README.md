@@ -1,6 +1,6 @@
 # picomask
 
-[![npm version](https://img.shields.io/npm/v/picomask?style=flat&colorA=4488FF&colorB=4488FF)](https://www.npmjs.com/package/picomask) [![test coverage](https://img.shields.io/coveralls/github/sure-thing/picomask?style=flat&colorA=223355&colorB=223355)](https://coveralls.io/github/sure-thing/picomask?branch=main) [![npm bundle size](https://badgen.net/bundlephobia/minzip/picomask?color=223355&labelColor=223355)](https://packagephobia.com/result?p=picomask)
+[![npm version](https://img.shields.io/npm/v/picomask?style=flat&colorA=4488FF&colorB=4488FF)](https://www.npmjs.com/package/picomask) [![test coverage](https://img.shields.io/coveralls/github/sure-thing/picomask?style=flat&colorA=223355&colorB=223355)](https://coveralls.io/github/sure-thing/picomask?branch=main) [![npm bundle size](https://badgen.net/bundlephobia/minzip/picomask?color=223355&labelColor=223355)](https://bundlephobia.com/package/picomask)
 
 Very small integer text mask for basic applications.
 
