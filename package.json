@@ -7,6 +7,9 @@
   "main": "./dist/picomask.cjs",
   "module": "./dist/picomask.module.js",
   "unpkg": "./dist/picomask.umd.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prepare": "is-ci || husky install",
     "build": "microbundle",
