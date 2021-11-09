@@ -1,13 +1,13 @@
 export function picomask(raw: string, pattern = '') {
   let chars = pattern.split('')
-  let sanitized = raw.replace(/[^0-9]/gi, '').split('')
+  let sanitized = raw.replace(/[^\d]/gi, '').split('')
   let value = ''
   let parts: { [key: string]: string } = {}
 
   while (chars.length) {
     const char = chars.shift() as string
 
-    if (/[^a-z]/i.test(char) && sanitized.length) {
+    if (/[^a-z\d]/i.test(char) && sanitized.length) {
       value += char
       continue
     }
@@ -40,12 +40,12 @@ export function transform(parts: { [key: string]: string }, pattern = '') {
   while (chars.length) {
     const char = chars.shift() as string
 
-    if (/[^a-z]/i.test(char)) {
+    if (/[^a-z\d]/i.test(char)) {
       value += char
       continue
     }
 
-    value += sanitized[char].shift() || ''
+    if (sanitized[char]) value += sanitized[char].shift() || ''
   }
 
   return picomask(value, pattern)

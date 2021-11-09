@@ -54,3 +54,10 @@ tap.test('transform', async (t) => {
     }
   )
 })
+
+tap.test('transform partial', async (t) => {
+  t.same(transform(picomask('020', 'mm/dd/yyyy'), 'yyyy-mm-dd'), {
+    value: '020',
+    y: '020',
+  })
+})
