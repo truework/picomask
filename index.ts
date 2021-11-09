@@ -7,7 +7,7 @@ export function picomask(raw: string, pattern = '') {
   while (chars.length) {
     const char = chars.shift() as string
 
-    if (/[^a-z]/i.test(char)) {
+    if (/[^a-z]/i.test(char) && sanitized.length) {
       value += char
       continue
     }
