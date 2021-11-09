@@ -14,7 +14,7 @@ export function picomask(raw: string, pattern = '') {
 
     const val = sanitized.shift()
 
-    if (!val) continue
+    if (!val) break
 
     value += val
     parts[char] = parts[char] || ''

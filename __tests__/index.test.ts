@@ -27,3 +27,9 @@ tap.test('short string', async (t) => {
 
   t.equal(res.value, '123')
 })
+
+tap.test('partial mask', async (t) => {
+  const res = picomask('020', 'mm/dd/yyyy')
+
+  t.equal(res.value, '02/0')
+})
