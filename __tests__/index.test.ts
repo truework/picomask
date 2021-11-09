@@ -1,6 +1,6 @@
 import tap from 'tap'
 
-import { picomask } from '../index'
+import { picomask, transform } from '../index'
 
 tap.test('no pattern', async (t) => {
   const res = picomask('123')
@@ -33,4 +33,24 @@ tap.test('partial mask', async (t) => {
   t.equal(picomask('0', date).value, '0')
   t.equal(picomask('02', date).value, '02')
   t.equal(picomask('020', date).value, '02/0')
+})
+
+tap.test('transform', async (t) => {
+  t.equal(transform(picomask('02022020', 'mm/dd/yyyy')).value, '')
+  t.same(transform(picomask('02022020', 'mm/dd/yyyy'), 'yyyy-mm-dd'), {
+    value: '2020-02-02',
+    y: '2020',
+    m: '02',
+    d: '02',
+  })
+  t.notSame(
+    // extra pattern char
+    transform(picomask('02022020', 'mm/dd/yyyy'), 'yyyyy-mm-dd'),
+    {
+      value: '2020-02-02',
+      y: '2020',
+      m: '02',
+      d: '02',
+    }
+  )
 })

@@ -7,11 +7,15 @@ Very small integer text mask for basic applications.
 ## Usage
 
 ```javascript
-import { picomask } from 'picomask'
+import { picomask, transform } from 'picomask'
 
-picomask('09072021', 'mm/dd/yyyy')
+const mask = picomask('09072021', 'mm/dd/yyyy')
 
 // => { value: '09/07/2021', m: '09', d: '07', y: '2021' }
+
+const anotherMask = transform(mask, 'yyyy-mm-dd')
+
+// => { value: '2021-09-07', m: '09', d: '07', y: '2021' }
 ```
 
 ## Other Examples
